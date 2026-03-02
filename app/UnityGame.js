@@ -9,16 +9,16 @@ export default function UnityGame() {
   useEffect(() => {
     // Load the Unity loader script
     const script = document.createElement("script");
-    script.src = "/game/Build/Dungeon Keeper v0.9.loader.js";
+    script.src = "/game/Build/Dungeon Keeper v0.9.1.loader.js";
     script.async = true;
     
     script.onload = () => {
       if (canvasRef.current && window.createUnityInstance) {
         window.createUnityInstance(canvasRef.current, {
           arguments: [],
-          dataUrl: "/game/Build/Dungeon Keeper v0.9.data",
-          frameworkUrl: "/game/Build/Dungeon Keeper v0.9.framework.js",
-          codeUrl: "/game/Build/Dungeon Keeper v0.9.wasm",
+          dataUrl: "/game/Build/Dungeon Keeper v0.9.1.data",
+          frameworkUrl: "/game/Build/Dungeon Keeper v0.9.1.framework.js",
+          codeUrl: "/game/Build/Dungeon Keeper v0.9.1.wasm",
           streamingAssetsUrl: "/game/StreamingAssets",
           companyName: "DefaultCompany",
           productName: "Manpack",
