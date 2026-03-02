@@ -40,7 +40,7 @@ export const POST = async () => {
         date: player.date,
       }))
       .sort((a, b) => b.score - a.score)
-      .slice(0, 5);
+      .slice(0, 25);
     
     return NextResponse.json({ result: top5 }, { status: 200 });
   } catch (error) {
