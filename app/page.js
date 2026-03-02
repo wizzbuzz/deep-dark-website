@@ -24,7 +24,10 @@ export default function Home() {
       </div>
       <div id="content" className="bg-[#231F20] w-full flex flex-col justify-center items-center">
         <UnityGame />
-        <Tabs tabs={tabs}/>
+        <div className="py-2">
+
+          <Tabs tabs={tabs}/>
+        </div>
       </div>
     </div>
   );
