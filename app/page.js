@@ -2,6 +2,7 @@
 
 import Tabs from "./Tabs.js";
 import UnityGame from "./UnityGame.js";
+import { POST } from "./db.js";
 
 const tabs = [
   {
@@ -15,6 +16,8 @@ const tabs = [
     content: <p>Statistics here</p>,
   },
 ];
+
+console.log(POST);
 
 export default function Home() {
   return (
