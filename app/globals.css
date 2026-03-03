@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Pixel";
+  src: url(../public/fonts/pixel.otf) format("opentype");
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-body {
-  font-family: url(../public/fonts/pixel.otf) !important;
+#body {
+  font-family: "Pixel", Arial, Helvetica, sans-serif;
 }
 
 @theme inline {
