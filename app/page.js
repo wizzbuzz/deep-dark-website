@@ -20,7 +20,6 @@ export default function Home() {
           method: 'POST'
         });
         const data = await response.json();
-        console.log("YES! " + data.result.length);
         setLeaderBoard(Array.isArray(data.result) ? data.result : []);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -55,7 +54,7 @@ export default function Home() {
                 <tr key={index} className="border-b-2 border-[#F24405]">
                 <td>{index + 1}</td>
                 <td>{player.username}</td>
-                <td>{player.role}</td>
+                <td>{CapitalizeFirstLetter(player.role)}</td>
                 <td>{player.score}</td>
               </tr>
             ))}
@@ -63,26 +62,13 @@ export default function Home() {
             )}
           
         </div>
-        // <div className="p-4 space-y-2">
-        //   {leaderBoard.length === 0 ? (
-        //     <p>No leaderboard data yet.</p>
-        //   ) : (
-        //     leaderBoard.map((player, index) => (
-        //       <div key={player.id ?? `${player.username}-${index}`} className="flex justify-between border-b border-[#F24405] pb-1">
-        //         <span>{index + 1}. {player.username}</span>
-        //         <span>{CapitalizeFirstLetter(player.role)}</span>
-        //         <span>{player.score}</span>
-        //       </div>
-        //     ))
-        //   )}
-        // </div>
       )
     },
   ];
 
   return (
     <div id="body" className="min-h-screen bg-zinc-50 font-sans text-white">
-      <div id="header" className="bg-[#f0e9eb] p-5 w-full flex justify-center">
+      <div id="header" className="bg-[#231F20] p-5 w-full flex justify-center">
         <img src="Logo.png" className="w-[20%]"/>
       </div>
       <div id="content" className="bg-[#231F20] w-full flex flex-col justify-center items-center">
