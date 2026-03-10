@@ -9,20 +9,20 @@ export default function UnityGame() {
   useEffect(() => {
     // Load the Unity loader script
     const script = document.createElement("script");
-    script.src = "/game/Build/Dungeon Keeper v0.9.3.loader.js";
+    script.src = "/game/Build/Deep Dark v1.1.loader.js";
     script.async = true;
     
     script.onload = () => {
       if (canvasRef.current && window.createUnityInstance) {
         window.createUnityInstance(canvasRef.current, {
           arguments: [],
-          dataUrl: "/game/Build/Dungeon Keeper v0.9.3.data",
-          frameworkUrl: "/game/Build/Dungeon Keeper v0.9.3.framework.js",
-          codeUrl: "/game/Build/Dungeon Keeper v0.9.3.wasm",
+          dataUrl: "/game/Build/Deep Dark v1.1.data",
+          frameworkUrl: "/game/Build/Deep Dark v1.1.framework.js",
+          codeUrl: "/game/Build/Deep Dark v1.1.wasm",
           streamingAssetsUrl: "/game/StreamingAssets",
-          companyName: "DefaultCompany",
-          productName: "Manpack",
-          productVersion: "0.2.0",
+          companyName: "Joop Fontys",
+          productName: "Deep Dark",
+          productVersion: "1.1",
         }).then((unityInstance) => {
           unityInstanceRef.current = unityInstance;
         }).catch((message) => {

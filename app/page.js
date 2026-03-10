@@ -50,14 +50,16 @@ export default function Home() {
               <p>No leaderboard data yet.</p>
             ) : (
               <table className="w-full h-full">
-              {leaderBoard.map((player, index) => (
-                <tr key={index} className="border-b-2 border-[#F24405]">
-                <td>{index + 1}</td>
-                <td>{player.username}</td>
-                <td>{CapitalizeFirstLetter(player.role)}</td>
-                <td>{player.score}</td>
-              </tr>
-            ))}
+                <tbody>
+                  {leaderBoard.map((player, index) => (
+                    <tr key={index} className="border-b-2 border-[#F24405]">
+                      <td>{index + 1}</td>
+                      <td>{player.username}</td>
+                      <td>{CapitalizeFirstLetter(player.role)}</td>
+                      <td>{player.score}</td>
+                    </tr>
+                  ))}
+                </tbody>
               </table>
             )}
           
