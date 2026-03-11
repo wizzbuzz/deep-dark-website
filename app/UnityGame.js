@@ -5,24 +5,25 @@ import { useEffect, useRef } from "react";
 export default function UnityGame() {
   const canvasRef = useRef(null);
   const unityInstanceRef = useRef(null);
+  const buildPath = "/game/Build/Deep Dark v1.21";
 
   useEffect(() => {
     // Load the Unity loader script
     const script = document.createElement("script");
-    script.src = "/game/Build/Deep Dark v1.1.loader.js";
+    script.src = `${buildPath}.loader.js`;
     script.async = true;
     
     script.onload = () => {
       if (canvasRef.current && window.createUnityInstance) {
         window.createUnityInstance(canvasRef.current, {
           arguments: [],
-          dataUrl: "/game/Build/Deep Dark v1.1.data",
-          frameworkUrl: "/game/Build/Deep Dark v1.1.framework.js",
-          codeUrl: "/game/Build/Deep Dark v1.1.wasm",
+          dataUrl: `${buildPath}.data`,
+          frameworkUrl: `${buildPath}.framework.js`,
+          codeUrl: `${buildPath}.wasm`,
           streamingAssetsUrl: "/game/StreamingAssets",
-          companyName: "Joop Fontys",
+          companyName: "Joop",
           productName: "Deep Dark",
-          productVersion: "1.1",
+          productVersion: "0.2.0",
         }).then((unityInstance) => {
           unityInstanceRef.current = unityInstance;
         }).catch((message) => {
