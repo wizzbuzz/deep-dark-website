@@ -83,7 +83,7 @@ export default function Home() {
           id="downloadBtn"
           value="download"
           onClick={downloadTxtFile}
-          className="bg-[#F24405] p-1 text-2xl my-10"
+          className="bg-[#F24405] hover:bg-[#F55C24] active:bg-[#D93D04] transition-colors duration-150 p-1 text-2xl my-10"
         >
           Download the Game
         </button>
