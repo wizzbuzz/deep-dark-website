@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 export default function UnityGame() {
   const canvasRef = useRef(null);
   const unityInstanceRef = useRef(null);
-  const buildPath = "/game/Build/Deep Dark v1.22";
+  const buildPath = "/game/Build/Deep Dark v1.24";
 
   useEffect(() => {
     // Load the Unity loader script
