@@ -68,7 +68,7 @@ export default function Home() {
     },
   ];
   const downloadTxtFile = () => {
-    console.log("download logic goes here")
+    window.location.href = "/api/download";
   }
 
   return (
@@ -79,7 +79,14 @@ export default function Home() {
       <div id="content" className="bg-[#231F20] w-full flex flex-col justify-center items-center">
         {/* <UnityGame /> */}
         
-        <button id="downloadBtn" value="download" className="bg-[#F24405] p-1 text-2xl my-10">Download the Game</button>
+        <button
+          id="downloadBtn"
+          value="download"
+          onClick={downloadTxtFile}
+          className="bg-[#F24405] p-1 text-2xl my-10"
+        >
+          Download the Game
+        </button>
         <div className="py-2">
 
           <Tabs tabs={tabs}/>
