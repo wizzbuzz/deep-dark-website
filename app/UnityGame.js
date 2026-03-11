@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 export default function UnityGame() {
   const canvasRef = useRef(null);
   const unityInstanceRef = useRef(null);
-  const buildPath = "/game/Build/Deep Dark v1.21";
+  const buildPath = "/game/Build/Deep Dark v1.22";
 
   useEffect(() => {
     // Load the Unity loader script
@@ -17,9 +17,9 @@ export default function UnityGame() {
       if (canvasRef.current && window.createUnityInstance) {
         window.createUnityInstance(canvasRef.current, {
           arguments: [],
-          dataUrl: `${buildPath}.data`,
-          frameworkUrl: `${buildPath}.framework.js`,
-          codeUrl: `${buildPath}.wasm`,
+          dataUrl: `${buildPath}.data.br`,
+          frameworkUrl: `${buildPath}.framework.js.br`,
+          codeUrl: `${buildPath}.wasm.br`,
           streamingAssetsUrl: "/game/StreamingAssets",
           companyName: "Joop",
           productName: "Deep Dark",
