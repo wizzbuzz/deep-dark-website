@@ -1,5 +1,16 @@
 import { NextResponse } from 'next/server';
 
+export const OPTIONS = async () => {
+  return new NextResponse(null, {
+    status: 204,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    },
+  });
+};
+
 // Endpoint to add a new player to the leaderboard
 export const POST = async (request) => {
   try {

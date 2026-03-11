@@ -20,7 +20,7 @@ export default function Tabs({tabs}){
         ))}
       </div>
 
-    <div className="content w-[600] h-[500] border-2 border-[#F24405]">
+    <div className="content w-[600] min-h-[500] border-2 border-[#F24405]">
         {current.content}
       </div>
     </div>

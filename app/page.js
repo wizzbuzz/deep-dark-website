@@ -67,6 +67,9 @@ export default function Home() {
       )
     },
   ];
+  const downloadTxtFile = () => {
+    console.log("download logic goes here")
+  }
 
   return (
     <div id="body" className="min-h-screen bg-zinc-50 font-sans text-white">
@@ -74,7 +77,9 @@ export default function Home() {
         <img src="Logo.png" className="w-[20%]"/>
       </div>
       <div id="content" className="bg-[#231F20] w-full flex flex-col justify-center items-center">
-        <UnityGame />
+        {/* <UnityGame /> */}
+        
+        <button id="downloadBtn" value="download" className="bg-[#F24405] p-1 text-2xl my-10">Download the Game</button>
         <div className="py-2">
 
           <Tabs tabs={tabs}/>
